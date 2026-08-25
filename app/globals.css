@@ -1,0 +1,227 @@
+@import "tailwindcss";
+
+/* ─────────────────────────────────────────────
+   Design tokens
+   Palette volontairement restreinte :
+   encre (presque noir) · os (blanc cassé) · terre (accent unique)
+   ───────────────────────────────────────────── */
+@theme {
+  --color-ink: #0b0c0d;
+  --color-ink-900: #121416;
+  --color-ink-800: #1c1f22;
+  --color-ink-700: #2a2e32;
+  --color-mute: #6c7075;
+  --color-mute-light: #9aa0a6;
+  --color-bone: #f7f6f2;
+  --color-bone-200: #efeee7;
+  --color-line: #e3e1d8;
+  --color-line-dark: #2a2d31;
+  --color-accent: #c04a26;
+  --color-accent-600: #a63d1c;
+  --color-accent-soft: #f4e6df;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", sans-serif;
+  --font-display: var(--font-display), "Iowan Old Style", Georgia, serif;
+
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ─────────────────────────────────────────────
+   Base
+   ───────────────────────────────────────────── */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* compense le header collant lors des ancres */
+    scroll-padding-top: 96px;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-bone);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-synthesis-weight: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: var(--color-ink);
+    color: var(--color-bone);
+  }
+
+  h1,
+  h2,
+  h3 {
+    letter-spacing: -0.035em;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  /* Champs de formulaire : évite le zoom automatique sur iOS (< 16px) */
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+}
+
+/* ─────────────────────────────────────────────
+   Utilitaires
+   ───────────────────────────────────────────── */
+@utility u-container {
+  width: 100%;
+  max-width: 1240px;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+
+  @media (min-width: 768px) {
+    padding-inline: 2rem;
+  }
+
+  @media (min-width: 1280px) {
+    padding-inline: 2.5rem;
+  }
+}
+
+/* Titre éditorial : grande échelle fluide */
+@utility u-display {
+  font-size: clamp(2.4rem, 7.2vw, 5.25rem);
+  line-height: 0.98;
+  font-weight: 500;
+  letter-spacing: -0.045em;
+}
+
+@utility u-h2 {
+  font-size: clamp(1.9rem, 4.4vw, 3.1rem);
+  line-height: 1.04;
+  font-weight: 500;
+  letter-spacing: -0.038em;
+}
+
+@utility u-h3 {
+  font-size: clamp(1.25rem, 2.2vw, 1.6rem);
+  line-height: 1.15;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+}
+
+@utility u-lead {
+  font-size: clamp(1.02rem, 1.55vw, 1.2rem);
+  line-height: 1.6;
+}
+
+/* Emphase typographique en serif italique */
+@utility u-em {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+/* ─────────────────────────────────────────────
+   Apparition au scroll (IntersectionObserver)
+   ───────────────────────────────────────────── */
+[data-reveal] {
+  opacity: 0;
+  transform: translate3d(0, 18px, 0);
+  transition:
+    opacity 0.75s var(--ease-out-soft),
+    transform 0.75s var(--ease-out-soft);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+[data-reveal="in"] {
+  opacity: 1;
+  transform: none;
+}
+
+/* Ligne qui se dessine */
+[data-rule] {
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.9s var(--ease-out-soft);
+}
+
+[data-rule="in"] {
+  transform: scaleX(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+  }
+
+  [data-rule] {
+    transform: scaleX(1);
+  }
+}
+
+/* ─────────────────────────────────────────────
+   Bandeau défilant (preuve de spécialités)
+   ───────────────────────────────────────────── */
+@keyframes marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.marquee-track {
+  animation: marquee 38s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
+
+/* ─────────────────────────────────────────────
+   FAQ native (details/summary) — zéro JavaScript
+   ───────────────────────────────────────────── */
+details > summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+details[open] .faq-sign {
+  transform: rotate(45deg);
+}
