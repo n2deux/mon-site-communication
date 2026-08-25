@@ -5,6 +5,32 @@ Aucune dépendance d'animation : tout passe par CSS et un unique `IntersectionOb
 
 ---
 
+## Par où commencer
+
+Trois documents, selon qui vous êtes.
+
+| Vous êtes | Lisez | Contenu |
+| --- | --- | --- |
+| **Le propriétaire du site** | **[LISEZ-MOI.md](LISEZ-MOI.md)** | Guide complet et sans jargon : installer, personnaliser, brancher le formulaire, mettre en ligne, budget réel |
+| **Un assistant IA** (Claude Code, Cursor, Copilot) | **[AGENT.md](AGENT.md)** | Contexte du projet, architecture, conventions, règles à respecter et liste des tâches |
+| **Un développeur** | la suite de ce fichier | Référence technique |
+
+> **Si vous découvrez ce dépôt : ouvrez [LISEZ-MOI.md](LISEZ-MOI.md) en premier.**
+> Tout y est expliqué, y compris pour quelqu'un qui n'a jamais touché à du code.
+
+### L'essentiel en trois points
+
+1. **Le site est fonctionnel mais volontairement incomplet.** Aucun faux client, faux chiffre
+   ou faux témoignage n'a été inséré. Partout où une information réelle manque, un texte
+   `[ENTRE CROCHETS]` marque l'emplacement à remplir.
+2. **Tout le contenu modifiable est dans le dossier [`content/`](content/).** Nom de marque,
+   tarifs, réalisations, FAQ, parcours : rien d'autre n'est à toucher pour personnaliser le site.
+3. **Le formulaire de contact n'envoie encore rien** tant qu'il n'est pas branché sur un
+   service d'envoi (§5). En attendant, il affiche un message honnête plutôt qu'une fausse
+   confirmation.
+
+---
+
 ## 1. Démarrer en local
 
 ```bash
@@ -171,13 +197,28 @@ Aucune clé secrète requise, mise en place en deux minutes.
 
 ---
 
-## 7. Déploiement (Vercel)
+## 7. Déploiement
+
+Cible recommandée : **Cloudflare Pages** ou **Netlify**. Leurs offres gratuites autorisent
+l'usage commercial et suffisent largement au trafic d'un site vitrine.
 
 1. Poussez le dossier sur un dépôt GitHub.
-2. Sur vercel.com : **Add New → Project → Import**. Le framework est détecté seul.
-3. **Settings → Environment Variables** : ajoutez `NEXT_PUBLIC_SITE_URL` et les
-   variables du formulaire, pour les environnements *Production* et *Preview*.
-4. **Deploy**, puis **Settings → Domains** pour brancher votre nom de domaine.
+2. Sur pages.cloudflare.com (ou netlify.com) : connectez le dépôt. Next.js est détecté seul.
+3. **Environment variables** : ajoutez `NEXT_PUBLIC_SITE_URL` et les variables du
+   formulaire (§6), en Production et en Preview.
+4. **Deploy**, puis section **Domains** pour brancher votre nom de domaine.
+   Le certificat HTTPS est automatique et gratuit.
+
+> **À propos de Vercel.** C'est la plateforme la plus connue pour Next.js et son offre
+> Hobby est gratuite, mais ses conditions d'utilisation la réservent à un usage **non
+> commercial**. Un site professionnel qui génère des demandes de devis en sort. Soit vous
+> prenez leur offre payante, soit vous choisissez Cloudflare Pages ou Netlify.
+
+### Développer sans installer Node.js (Chromebook, poste verrouillé)
+
+Une fois le dépôt sur GitHub : bouton **Code → Codespaces → Create codespace**. Un éditeur
+complet s'ouvre dans le navigateur. `npm install` puis `npm run dev`, et une notification
+*Open in Browser* ouvre le site dans un onglet. Rien à installer sur la machine.
 
 Après mise en ligne :
 
