@@ -71,7 +71,7 @@ export function About() {
           <div className="lg:col-span-7">
             <div
               data-reveal
-              className="relative aspect-[2/3] max-w-xl overflow-hidden rounded-lg bg-bone"
+              className="relative aspect-[2/3] max-w-lg overflow-hidden rounded-lg bg-bone"
             >
               <Image
                 src="/IMG_0413.JPG"
