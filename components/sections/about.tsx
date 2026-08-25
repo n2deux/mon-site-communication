@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Eyebrow, Section } from "@/components/ui/section";
 import { Button } from "@/components/ui/button";
 import { site } from "@/content/site";
@@ -68,23 +69,17 @@ export function About() {
           </div>
 
           <div className="lg:col-span-7">
-            {/* Emplacement portrait — remplacer par une photo professionnelle */}
             <div
               data-reveal
-              className="relative flex aspect-[4/3] items-center justify-center rounded-lg border border-line bg-bone md:aspect-[16/10]"
+              className="relative aspect-[4/3] overflow-hidden rounded-lg bg-bone md:aspect-[16/10]"
             >
-              <div className="px-8 text-center">
-                <p className="text-[0.72rem] uppercase tracking-[0.2em] text-mute-light">
-                  Emplacement portrait
-                </p>
-                <p className="u-em mt-3 text-[1.4rem] text-mute">
-                  [PHOTO PROFESSIONNELLE À AJOUTER]
-                </p>
-                <p className="mt-3 text-[0.82rem] text-mute-light">
-                  Déposez l&apos;image dans /public et renseignez-la dans ce
-                  composant
-                </p>
-              </div>
+              <Image
+                src="/IMG_0413.JPG"
+                alt="Nolann Coïc, consultant en communication digitale à Rennes"
+                fill
+                sizes="(min-width: 1024px) 58vw, 100vw"
+                className="object-cover"
+              />
             </div>
 
             <dl className="mt-10 grid gap-px overflow-hidden rounded-lg bg-line sm:grid-cols-2">
