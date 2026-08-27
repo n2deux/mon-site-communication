@@ -74,7 +74,7 @@ export function About() {
               className="relative aspect-[2/3] max-w-lg overflow-hidden rounded-lg bg-bone"
             >
               <Image
-                src="/IMG_0415.JPG"
+                src="/IMG-20260827-WA0000.jpg"
                 alt="Nolann Coïc, consultant en communication digitale à Rennes"
                 fill
                 sizes="(min-width: 1024px) 58vw, 100vw"
