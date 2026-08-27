@@ -1,11 +1,5 @@
 import { Eyebrow, Section } from "@/components/ui/section";
-import {
-  certifications,
-  clientLogos,
-  credentials,
-  testimonials,
-  tools,
-} from "@/content/proof";
+import { clientLogos, credentials, testimonials, tools } from "@/content/proof";
 import { clean } from "@/lib/utils";
 
 /** Emplacement neutre : signale ce qui viendra, sans jamais simuler une preuve. */
@@ -80,32 +74,6 @@ export function Proof() {
               </li>
             ))}
           </ul>
-        </div>
-
-        {/* Certifications */}
-        <div data-reveal className="mt-14">
-          <h3 className="text-[0.72rem] uppercase tracking-[0.18em] text-bone/40">
-            Certifications
-          </h3>
-          <div className="mt-5">
-            {certifications.length > 0 ? (
-              <ul className="grid gap-px overflow-hidden rounded-lg bg-line-dark sm:grid-cols-2 lg:grid-cols-3">
-                {certifications.map((c) => (
-                  <li key={c.name} className="bg-ink p-6">
-                    <p className="text-[1rem] font-medium">{c.name}</p>
-                    <p className="mt-2 text-[0.85rem] text-bone/45">
-                      {c.issuer} · {c.year}
-                    </p>
-                  </li>
-                ))}
-              </ul>
-            ) : (
-              <EmptySlot
-                title="Emplacement certifications"
-                hint="Ajoutez vos certifications réelles dans content/proof.ts (par exemple Meta Certified ou Google Analytics)."
-              />
-            )}
-          </div>
         </div>
 
         {/* Témoignages */}
