@@ -25,15 +25,16 @@ export const site = {
   socials: {
     instagram: { label: "[n2studio.web]", url: "[https://www.instagram.com/n2studio.web/]" },
     linkedin: { label: "[Nolann Coïc]", url: "[https://www.linkedin.com/in/nolann-coic-98a674383/]" },
+    tiktok: { label: "[n2studio.web]", url: "[https://www.tiktok.com/@n2studio.web]" }
   },
 
-  /** Statut juridique — à compléter dès l'immatriculation */
+
   legal: {
     status: "[micro-entreprise]",
     siret: "[SIRET]",
     address: "[ADRESSE]",
-    hostName: "[HÉBERGEUR]",
-    hostAddress: "nom hebergeur",
+    hostName: "Netlify, Inc.",
+    hostAddress: "44 Montgomery Street, Suite 300, San Francisco, CA 94104, États-Unis",
   },
 } as const;
 
