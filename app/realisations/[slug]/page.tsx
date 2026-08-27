@@ -109,7 +109,7 @@ export default async function ProjectPage({ params }: Params) {
                   Emplacement visuel
                 </p>
                 <p className="u-em text-[1.8rem] text-bone/25 md:text-[2.6rem]">
-                  [VISUEL DU PROJET À AJOUTER]
+                  Visuel du projet à venir
                 </p>
               </div>
             )}
@@ -162,8 +162,8 @@ export default async function ProjectPage({ params }: Params) {
                 </dl>
               ) : (
                 <p className="rounded-md border border-dashed border-line px-5 py-4 text-[0.93rem] text-mute">
-                  [RÉSULTATS À AJOUTER] — aucun chiffre n&apos;est publié tant
-                  qu&apos;il n&apos;a pas été mesuré et validé par le client.
+                  Aucun chiffre n&apos;est publié tant qu&apos;il n&apos;a pas été
+                  mesuré et validé par le client.
                 </p>
               )}
             </Block>

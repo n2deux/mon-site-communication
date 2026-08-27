@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { LegalPage } from "@/components/legal-page";
-import { site } from "@/content/site";
+import { isPlaceholder, site } from "@/content/site";
 import { clean } from "@/lib/utils";
 
 export const metadata: Metadata = {
@@ -16,10 +16,15 @@ export default function Page() {
       <section>
         <h2>Éditeur du site</h2>
         <p>
-          {clean(site.fullName)} — {clean(site.legal.status)}
+          {clean(site.fullName)}
+          {!isPlaceholder(site.legal.status) && ` — ${clean(site.legal.status)}`}
         </p>
-        <p>Adresse : {clean(site.legal.address)}</p>
-        <p>SIRET : {clean(site.legal.siret)}</p>
+        {!isPlaceholder(site.legal.address) && (
+          <p>Adresse : {clean(site.legal.address)}</p>
+        )}
+        {!isPlaceholder(site.legal.siret) && (
+          <p>SIRET : {clean(site.legal.siret)}</p>
+        )}
         <p>Email : {clean(site.email)}</p>
         <p>Directeur de la publication : {clean(site.fullName)}</p>
       </section>
@@ -63,13 +68,6 @@ export default function Page() {
         </p>
       </section>
 
-      <p className="rounded-md border border-dashed border-line px-5 py-4 text-[0.9rem] text-mute">
-        Les champs entre crochets sont à compléter dans le fichier
-        <code className="mx-1 rounded bg-bone-200 px-1.5 py-0.5 text-[0.85rem]">
-          content/site.ts
-        </code>
-        dès l&apos;immatriculation de l&apos;activité.
-      </p>
     </LegalPage>
   );
 }
