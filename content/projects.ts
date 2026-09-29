@@ -54,7 +54,7 @@ export const projects: Project[] = [
     year: "2026",
     category: "Création de contenu",
     tags: ["Tournage", "Montage", "Teaser", "Clip vidéo"],
-    cover: null,
+    cover: "/realisations/nash paysage.jpg",
     excerpt:
       "Tournage et montage d'un teaser et d'un clip vidéo pour l'artiste Nash.",
     context: "Projet audiovisuel réalisé pour l'artiste Nash en 2026.",

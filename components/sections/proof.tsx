@@ -123,7 +123,7 @@ export function Proof() {
                         <img
                           src={logo.src}
                           alt={`Portrait de ${logo.name}`}
-                          className="h-16 w-16 rounded-full object-cover"
+                          className="h-20 w-auto max-w-20 rounded-md object-contain"
                           loading="lazy"
                         />
                         <figcaption className="text-[0.85rem] text-bone/60">

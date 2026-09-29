@@ -18,9 +18,9 @@ export const credentials = [
   },
   {
     label: "Expériences en entreprise",
-    value: "1 stage",
+    value: "2 stages",
     detail:
-      "Stage de deux mois comme chargé de communication au sein d'une entreprise de e-commerce.",
+      "Stage à la Communauté de communes de Dol-de-Bretagne, puis deux mois comme chargé de communication dans une entreprise de e-commerce.",
   },
   {
     label: "Zone d'intervention",
@@ -38,7 +38,9 @@ export const tools = [
   "Adobe Photoshop (scolaire)",
   "Google",
   "Flipaclip",
-  "Claude IA"
+  "Claude IA",
+  "ChatGPT",
+  "Picsart"
 ] as const;
 
 /** Ajoutez ici vos certifications réelles uniquement (ex. Meta Certified, Google). */

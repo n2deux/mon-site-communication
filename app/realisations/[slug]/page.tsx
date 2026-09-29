@@ -101,7 +101,7 @@ export default async function ProjectPage({ params }: Params) {
                 fill
                 priority
                 sizes="(max-width: 1240px) 100vw, 1240px"
-                className="object-cover"
+                className="object-contain"
               />
             ) : (
               <div className="flex h-full w-full flex-col items-center justify-center gap-3 px-8 text-center">

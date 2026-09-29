@@ -15,7 +15,7 @@ const facts = [
   },
   {
     label: "Expérience en entreprise",
-    text: "Stage de deux mois comme chargé de communication au sein d'une entreprise de e-commerce.",
+    text: "Deux stages : à la Communauté de communes de Dol-de-Bretagne, puis deux mois comme chargé de communication dans une entreprise de e-commerce.",
   },
   {
     label: "Spécialisation",
