@@ -117,13 +117,28 @@ export function Proof() {
               <ul className="flex flex-wrap items-center gap-x-12 gap-y-8">
                 {clientLogos.map((logo) => (
                   <li key={logo.name}>
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={logo.src}
-                      alt={logo.name}
-                      className="h-8 w-auto opacity-60 transition-opacity duration-300 hover:opacity-100"
-                      loading="lazy"
-                    />
+                    {logo.type === "portrait" ? (
+                      <figure className="flex flex-col items-center gap-2">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img
+                          src={logo.src}
+                          alt={`Portrait de ${logo.name}`}
+                          className="h-16 w-16 rounded-full object-cover"
+                          loading="lazy"
+                        />
+                        <figcaption className="text-[0.85rem] text-bone/60">
+                          {clean(logo.name)}
+                        </figcaption>
+                      </figure>
+                    ) : (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img
+                        src={logo.src}
+                        alt={logo.name}
+                        className="h-8 w-auto opacity-60 transition-opacity duration-300 hover:opacity-100"
+                        loading="lazy"
+                      />
+                    )}
                   </li>
                 ))}
               </ul>

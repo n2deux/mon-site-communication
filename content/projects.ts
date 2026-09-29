@@ -47,6 +47,31 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: "nash-teaser-clip",
+    title: "Teaser et clip vidéo pour Nash",
+    client: "Nash",
+    sector: "Artiste",
+    year: "2026",
+    category: "Création de contenu",
+    tags: ["Tournage", "Montage", "Teaser", "Clip vidéo"],
+    cover: null,
+    excerpt:
+      "Tournage et montage d'un teaser et d'un clip vidéo pour l'artiste Nash.",
+    context: "Projet audiovisuel réalisé pour l'artiste Nash en 2026.",
+    problem: "Réalisation d'un teaser et d'un clip vidéo.",
+    objective: "Réaliser un teaser et un clip vidéo pour Nash.",
+    strategy: ["Tournage et montage des deux contenus vidéo."],
+    delivery: [
+      "Tournage du teaser",
+      "Montage du teaser",
+      "Tournage du clip vidéo",
+      "Montage du clip vidéo",
+    ],
+    results: [],
+    link: null,
+    published: true,
+  },
+  {
     slug: "projet-annonceur-01",
     title: "[PROJET ANNONCEUR 01]",
     client: "[CLIENT À AJOUTER]",
@@ -74,7 +99,7 @@ export const projects: Project[] = [
     ],
     results: [],
     link: null,
-    published: true,
+    published: false,
   },
   {
     slug: "projet-annonceur-02",
@@ -93,7 +118,7 @@ export const projects: Project[] = [
     delivery: ["[LIVRABLE 01]", "[LIVRABLE 02]"],
     results: [],
     link: null,
-    published: true,
+    published: false,
   },
   {
     slug: "identite-de-marque-01",
@@ -112,7 +137,7 @@ export const projects: Project[] = [
     delivery: ["[LIVRABLE 01]", "[LIVRABLE 02]"],
     results: [],
     link: null,
-    published: true,
+    published: false,
   },
   {
     slug: "contenu-video-01",
@@ -131,7 +156,7 @@ export const projects: Project[] = [
     delivery: ["[LIVRABLE 01]", "[LIVRABLE 02]"],
     results: [],
     link: null,
-    published: true,
+    published: false,
   },
   {
     slug: "social-media-01",
@@ -150,7 +175,7 @@ export const projects: Project[] = [
     delivery: ["[LIVRABLE 01]", "[LIVRABLE 02]"],
     results: [],
     link: null,
-    published: true,
+    published: false,
   },
   {
     slug: "publicite-meta-01",
@@ -169,7 +194,7 @@ export const projects: Project[] = [
     delivery: ["[LIVRABLE 01]", "[LIVRABLE 02]"],
     results: [],
     link: null,
-    published: true,
+    published: false,
   },
 ];
 

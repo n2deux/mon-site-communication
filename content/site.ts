@@ -13,19 +13,19 @@ export const site = {
   /** Fichier du logo placé dans /public */
   logo: "/IMG-20260825-WA0001.jpg",
   /** Votre identité civile, utilisée dans « À propos » et les mentions légales */
-  fullName: "[Nolann Coïc]",
+  fullName: "Nolann Coïc",
   role: "Communication digitale · Contenu · Social media · Acquisition",
   city: "Rennes",
   region: "Bretagne",
   country: "France",
 
-  email: "[contactpro.n2studio@gmail.com]",
-  phone: "[07 69 49 29 15]",
+  email: "contactpro.n2studio@gmail.com",
+  phone: "07 69 49 29 15",
 
   socials: {
-    instagram: { label: "[n2studio.web]", url: "[https://www.instagram.com/n2studio.web/]" },
-    linkedin: { label: "[Nolann Coïc]", url: "[https://www.linkedin.com/in/nolann-coic-98a674383/]" },
-    tiktok: { label: "[n2studio.web]", url: "[https://www.tiktok.com/@n2studio.web]" }
+    instagram: { label: "n2studio.web", url: "https://www.instagram.com/n2studio.web/" },
+    linkedin: { label: "Nolann Coïc", url: "https://www.linkedin.com/in/nolann-coic-98a674383/" },
+    tiktok: { label: "n2studio.web", url: "https://www.tiktok.com/@n2studio.web" }
   },
 
 

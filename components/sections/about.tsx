@@ -14,8 +14,8 @@ const facts = [
     text: "Des missions menées toute l'année avec de véritables annonceurs : cadrage, stratégie, production, recommandations.",
   },
   {
-    label: "Terrain",
-    text: "Plusieurs expériences en entreprise, au contact des contraintes réelles d'une organisation.",
+    label: "Expérience en entreprise",
+    text: "Stage de deux mois comme chargé de communication au sein d'une entreprise de e-commerce.",
   },
   {
     label: "Spécialisation",

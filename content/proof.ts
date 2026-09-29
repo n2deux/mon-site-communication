@@ -18,8 +18,9 @@ export const credentials = [
   },
   {
     label: "Expériences en entreprise",
-    value: "[1 stage]",
-    detail: "Immersions en entreprise — [Communautés de Communes de Dol de Bretagne]",
+    value: "1 stage",
+    detail:
+      "Stage de deux mois comme chargé de communication au sein d'une entreprise de e-commerce.",
   },
   {
     label: "Zone d'intervention",
@@ -29,13 +30,13 @@ export const credentials = [
 ] as const;
 
 export const tools = [
-  "Meta Business Suite",
-  "Meta Ads Manager",
+  "Meta Business",
+  "Meta Ads",
   "Adobe Premiere Pro (scolaire)",
   "CapCut",
   "Canva",
   "Adobe Photoshop (scolaire)",
-  "Google Analytics",
+  "Google",
   "Flipaclip",
   "Claude IA"
 ] as const;
@@ -57,4 +58,14 @@ export const testimonials: {
 }[] = [];
 
 /** Logos clients — uniquement avec autorisation écrite. Fichiers dans /public/clients. */
-export const clientLogos: { name: string; src: string }[] = [];
+export const clientLogos: {
+  name: string;
+  src: string;
+  type?: "portrait";
+}[] = [
+  {
+    name: "Nash",
+    src: "/clients/Screenshot%202026-09-29%2019.49.34.png",
+    type: "portrait",
+  },
+];

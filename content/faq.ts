@@ -9,7 +9,7 @@ export const faq = [
   },
   {
     q: "Travaillez-vous au mois ?",
-    a: "C'est le format que je privilégie. Une communication digitale produit ses effets par la régularité, pas par une opération isolée. Les accompagnements sont donc mensuels, avec une stratégie qui s'ajuste au fil des mois. Des missions ponctuelles restent possibles lorsqu'elles ont un objectif précis.",
+    a: "C'est le format de travail : une communication digitale produit ses effets par la régularité, pas par une opération isolée. Les accompagnements sont mensuels, avec une stratégie qui s'ajuste au fil des mois.",
   },
   {
     q: "Peut-on commencer par un premier échange ?",
