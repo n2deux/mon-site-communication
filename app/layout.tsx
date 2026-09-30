@@ -46,6 +46,7 @@ export const metadata: Metadata = {
   authors: [{ name: clean(site.fullName) }],
   creator: clean(site.fullName),
   alternates: { canonical: "/" },
+  icons: { icon: site.logo },
   openGraph: {
     type: "website",
     locale: "fr_FR",
