@@ -67,3 +67,10 @@ export const services: Service[] = [
     ],
   },
 ];
+
+export const additionalServices = {
+  title: "Des prestations uniques, selon vos besoins",
+  summary:
+    "En complément des accompagnements mensuels, je réalise aussi des prestations ponctuelles définies selon la demande de chaque client. Mariages, événements et clips en sont quelques exemples.",
+  examples: ["Mariages", "Événements", "Clips"],
+};

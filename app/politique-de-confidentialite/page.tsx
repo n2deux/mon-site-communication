@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <LegalPage title="Politique de confidentialité" updatedAt="">
+    <LegalPage title="Politique de confidentialité" updatedAt="30 septembre 2026">
       <section>
         <h2>Responsable du traitement</h2>
         <p>

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <LegalPage title="Mentions légales" updatedAt="[DATE]">
+    <LegalPage title="Mentions légales" updatedAt="30 septembre 2026">
       <section>
         <h2>Éditeur du site</h2>
         <p>
