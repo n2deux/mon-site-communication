@@ -128,6 +128,14 @@ export function SiteFooter() {
                   Parler de mon projet
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/avis"
+                  className="text-[0.92rem] text-bone/60 transition-colors duration-300 hover:text-bone"
+                >
+                  Laisser un avis
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

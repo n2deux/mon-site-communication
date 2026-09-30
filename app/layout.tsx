@@ -93,6 +93,8 @@ function StructuredData() {
       addressRegion: site.region,
       addressCountry: "FR",
     },
+    telephone: site.phone,
+    sameAs: Object.values(site.socials).map((social) => social.url),
     knowsAbout: [
       "Communication digitale",
       "Social media",

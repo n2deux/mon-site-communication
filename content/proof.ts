@@ -14,7 +14,7 @@ export const credentials = [
     label: "Projets annonceurs",
     value: "Cas réels",
     detail:
-      "Missions menées avec de véritables annonceurs tout au long de l'année de formation",
+      "Missions menées avec de véritables annonceurs tout au long de la formation",
   },
   {
     label: "Expériences en entreprise",

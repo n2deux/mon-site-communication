@@ -42,7 +42,7 @@ export function ProjectCard({
               fill
               priority={priority}
               sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
-              className="object-contain"
+              className="object-cover"
             />
           ) : (
             <CoverFallback project={project} />

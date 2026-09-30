@@ -1,5 +1,7 @@
 import { Eyebrow, Section } from "@/components/ui/section";
-import { clientLogos, credentials, testimonials, tools } from "@/content/proof";
+import { Button } from "@/components/ui/button";
+import { clientLogos, credentials, tools } from "@/content/proof";
+import { reviewPage } from "@/content/reviews";
 import { clean } from "@/lib/utils";
 
 /** Emplacement neutre : signale ce qui viendra, sans jamais simuler une preuve. */
@@ -76,34 +78,22 @@ export function Proof() {
           </ul>
         </div>
 
-        {/* Témoignages */}
+        {/* Avis Google */}
         <div data-reveal className="mt-14">
           <h3 className="text-[0.72rem] uppercase tracking-[0.18em] text-bone/40">
-            Ce qu&apos;en disent les clients
+            Avis Google
           </h3>
-          <div className="mt-5">
-            {testimonials.length > 0 ? (
-              <ul className="grid gap-6 md:grid-cols-2">
-                {testimonials.map((t) => (
-                  <li
-                    key={t.author}
-                    className="rounded-lg border border-line-dark p-8"
-                  >
-                    <blockquote className="text-[1.05rem] leading-relaxed text-bone/80">
-                      « {t.quote} »
-                    </blockquote>
-                    <p className="mt-6 text-[0.85rem] text-bone/45">
-                      {t.author} — {t.role}, {t.company}
-                    </p>
-                  </li>
-                ))}
-              </ul>
-            ) : (
-              <EmptySlot
-                title="Emplacement témoignages"
-                hint="Les premiers retours clients seront publiés ici, avec leur accord écrit. Aucun avis fictif ne figure sur ce site."
-              />
-            )}
+          <div className="mt-5 flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
+            <p className="max-w-xl text-[0.95rem] leading-relaxed text-bone/60">
+              {reviewPage.description}
+            </p>
+            <Button
+              href={reviewPage.googleReviewUrl}
+              variant="outline-light"
+              size="md"
+            >
+              {reviewPage.button}
+            </Button>
           </div>
         </div>
 
