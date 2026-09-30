@@ -39,6 +39,36 @@ export function Proof() {
           </p>
         </div>
 
+        <div className="mt-12 grid gap-4 md:grid-cols-3">
+          <div data-reveal className="rounded-lg border border-line-dark bg-ink p-6">
+            <p className="text-[0.72rem] uppercase tracking-[0.18em] text-bone/40">
+              Transparence
+            </p>
+            <p className="mt-4 text-[1.02rem] leading-relaxed text-bone/75">
+              Les éléments publiés sont vérifiables. Pas de promesse floue, pas
+              de résultat chiffré non validé.
+            </p>
+          </div>
+          <div data-reveal className="rounded-lg border border-line-dark bg-ink p-6">
+            <p className="text-[0.72rem] uppercase tracking-[0.18em] text-bone/40">
+              Méthode
+            </p>
+            <p className="mt-4 text-[1.02rem] leading-relaxed text-bone/75">
+              Stratégie, contenu, réseaux sociaux et acquisition sont pensés pour
+              bâtir une présence cohérente, mois après mois.
+            </p>
+          </div>
+          <div data-reveal className="rounded-lg border border-line-dark bg-ink p-6">
+            <p className="text-[0.72rem] uppercase tracking-[0.18em] text-bone/40">
+              Contact direct
+            </p>
+            <p className="mt-4 text-[1.02rem] leading-relaxed text-bone/75">
+              Email, Instagram, TikTok et LinkedIn sont ouverts. Une réponse est
+              donnée sous 24 h ouvrées.
+            </p>
+          </div>
+        </div>
+
         {/* Parcours */}
         <dl className="mt-14 grid gap-px overflow-hidden rounded-lg bg-line-dark sm:grid-cols-2 lg:grid-cols-4">
           {credentials.map((item, i) => (
@@ -87,13 +117,22 @@ export function Proof() {
             <p className="max-w-xl text-[0.95rem] leading-relaxed text-bone/60">
               {reviewPage.description}
             </p>
-            <Button
-              href={reviewPage.googleReviewUrl}
-              variant="outline-light"
-              size="md"
-            >
-              {reviewPage.button}
-            </Button>
+            <div className="flex flex-col gap-3 sm:flex-row">
+              <Button
+                href={reviewPage.googleProfileUrl}
+                variant="outline-light"
+                size="md"
+              >
+                {reviewPage.readButton}
+              </Button>
+              <Button
+                href={reviewPage.googleReviewUrl}
+                variant="outline-light"
+                size="md"
+              >
+                {reviewPage.button}
+              </Button>
+            </div>
           </div>
         </div>
 

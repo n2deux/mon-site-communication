@@ -21,7 +21,7 @@ export const offers: Offer[] = [
     name: "Essentiel",
     tagline: "Structurer",
     forWho:
-      "Pour les entreprises dont la présence en ligne existe, mais reste irrégulière et sans direction claire.",
+      "Pour les entreprises qui veulent remettre de la cohérence dans leur communication sans perdre du temps sur le pilotage du quotidien.",
     price: "À partir de 300 € / mois",
     priceNote: "Engagement mensuel, résiliable avec préavis.",
     includes: [
@@ -38,7 +38,7 @@ export const offers: Offer[] = [
     name: "Développement",
     tagline: "Accélérer",
     forWho:
-      "Pour les entreprises qui veulent un rythme soutenu, de la vidéo et une vraie animation de communauté.",
+      "Pour les entreprises qui veulent une présence plus régulière, plus visible et plus crédible sur les réseaux sans devoir tout gérer en interne.",
     price: "À partir de 500 € / mois",
     priceNote: "Le format le plus adapté à une croissance régulière.",
     includes: [
@@ -56,7 +56,7 @@ export const offers: Offer[] = [
     name: "Acquisition",
     tagline: "Générer",
     forWho:
-      "Pour les entreprises qui veulent transformer leur visibilité en demandes de contact concrètes.",
+      "Pour les entreprises qui veulent passer de la visibilité à des demandes de contact concrètes, avec une stratégie pensée pour convertir.",
     price: "À partir de 700 € / mois",
     priceNote: "Budget publicitaire à prévoir en complément.",
     includes: [

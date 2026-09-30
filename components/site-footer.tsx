@@ -116,6 +116,12 @@ export function SiteFooter() {
               </li>
               <li>
                 <SocialLink
+                  label={site.socials.tiktok.label}
+                  url={site.socials.tiktok.url}
+                />
+              </li>
+              <li>
+                <SocialLink
                   label={site.socials.linkedin.label}
                   url={site.socials.linkedin.url}
                 />

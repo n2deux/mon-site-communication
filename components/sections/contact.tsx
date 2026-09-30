@@ -35,7 +35,7 @@ function ContactLine({
 }
 
 export function Contact() {
-  const { instagram, linkedin } = site.socials;
+  const { instagram, linkedin, tiktok } = site.socials;
 
   return (
     <section
@@ -51,10 +51,21 @@ export function Contact() {
               <span className="u-em text-accent">votre projet</span>.
             </h2>
             <p data-reveal className="u-lead mt-7 max-w-md text-bone/55">
-              Quelques minutes suffisent pour comprendre vos besoins et voir si
-              je peux vous accompagner. Si ce n&apos;est pas le cas, je vous le
-              dirai franchement.
+              Vous avez un besoin de visibilité, un projet qui traîne ou une
+              communication trop irrégulière pour être efficace. On clarifie vos
+              objectifs, votre cible et le bon rythme avant de lancer quoi que
+              ce soit.
             </p>
+
+            <div data-reveal className="mt-8 rounded-lg border border-line-dark bg-ink-900 p-5">
+              <p className="text-[0.72rem] uppercase tracking-[0.18em] text-bone/40">
+                Le premier échange
+              </p>
+              <p className="mt-3 text-[0.96rem] leading-relaxed text-bone/70">
+                On regarde votre contexte, votre cible, vos canaux et le bon
+                niveau d&apos;accompagnement pour avancer sans friction.
+              </p>
+            </div>
 
             <div data-reveal className="mt-10">
               <ContactLine
@@ -66,6 +77,11 @@ export function Contact() {
                 label="Instagram"
                 value={instagram.label}
                 href={isPlaceholder(instagram.url) ? undefined : instagram.url}
+              />
+              <ContactLine
+                label="TikTok"
+                value={tiktok.label}
+                href={isPlaceholder(tiktok.url) ? undefined : tiktok.url}
               />
               <ContactLine
                 label="LinkedIn"

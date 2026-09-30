@@ -70,8 +70,8 @@ export function Hero() {
             className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center"
           >
             <Button href="/#contact">Parler de mon projet</Button>
-            <Button href="/#realisations" variant="ghost">
-              Voir mes réalisations
+            <Button href="/avis" variant="ghost">
+              Lire les avis Google
             </Button>
           </div>
 
