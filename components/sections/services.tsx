@@ -81,18 +81,13 @@ export function Services() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col gap-5 border-t border-line pt-8 md:flex-row md:items-center md:justify-between">
+        <div className="mt-12 border-t border-line pt-8">
           <div className="max-w-2xl">
             <h3 className="u-h3">{additionalServices.title}</h3>
             <p className="mt-3 text-[0.95rem] leading-relaxed text-mute">
               {additionalServices.summary}
             </p>
           </div>
-          <ul className="flex flex-wrap gap-x-6 gap-y-2 text-[0.9rem] font-medium text-ink/70">
-            {additionalServices.examples.map((example) => (
-              <li key={example}>{example}</li>
-            ))}
-          </ul>
         </div>
       </div>
     </Section>
