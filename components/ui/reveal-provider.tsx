@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 /**
  * Anime l'apparition des éléments portant [data-reveal] / [data-rule].
@@ -8,6 +9,8 @@ import { useEffect } from "react";
  * librairie d'animation, et sans coût au chargement initial.
  */
 export function RevealProvider({ children }: { children: React.ReactNode }) {
+  const pathname = usePathname();
+
   useEffect(() => {
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const targets = document.querySelectorAll<HTMLElement>(
@@ -37,7 +40,7 @@ export function RevealProvider({ children }: { children: React.ReactNode }) {
 
     targets.forEach((el) => observer.observe(el));
     return () => observer.disconnect();
-  }, []);
+  }, [pathname]);
 
   return <>{children}</>;
 }
