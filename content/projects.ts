@@ -68,7 +68,10 @@ export const projects: Project[] = [
       "Montage du clip vidéo",
     ],
     results: [],
-    link: null,
+    link: {
+      label: "Voir le clip",
+      url: "https://youtu.be/BWvaUdIl_Kw?si=3B3Sr4CNI7lwbdfF",
+    },
     published: true,
   },
   {
