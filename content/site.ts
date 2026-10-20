@@ -32,9 +32,9 @@ export const site = {
   legal: {
     status: "Micro-entreprise",
     siret: "[SIRET]",
-    address: "512 2nd Street, Suite 200, San Francisco, CA 94107, USA",
-    hostName: "Netlify, Inc.",
-    hostAddress: "44 Montgomery Street, Suite 300, San Francisco, CA 94104, États-Unis",
+    address: "[ADRESSE POSTALE]",
+    hostName: "[HÉBERGEUR]",
+    hostAddress: "[ADRESSE DE L'HÉBERGEUR]",
   },
 } as const;
 
