@@ -75,6 +75,41 @@ export const projects: Project[] = [
     published: true,
   },
   {
+    slug: "thaif-pack-videos-verticales",
+    title: "Pack de vidéos verticales pour THAÏF",
+    client: "THAÏF",
+    sector: "Artiste rap",
+    year: "2026",
+    category: "Création de contenu",
+    tags: ["Tournage", "Photoshoot", "Montage vidéo", "Format 9:16", "Cover"],
+    cover: "/realisations/IMG-20261102-WA0088.jpg",
+    excerpt:
+      "Réalisation d’un pack de 3 vidéos au format 9:16 et d’une cover pour l’artiste rap THAÏF.",
+    context:
+      "Projet audiovisuel réalisé pour l’artiste rap THAÏF en 2026.",
+    problem:
+      "Créer un pack de trois vidéos verticales au format 9:16 accompagné d’une cover.",
+    objective:
+      "Réaliser les trois vidéos et la cover pour l’artiste THAÏF.",
+    strategy: [
+      "Tournage des contenus vidéo",
+      "Photoshoot",
+      "Montage des vidéos et réalisation de la cover",
+    ],
+    delivery: [
+      "Tournage",
+      "Photoshoot",
+      "Montage de 3 vidéos au format 9:16",
+      "Cover",
+    ],
+    results: [],
+    link: {
+      label: "Voir une vidéo sur TikTok",
+      url: "https://www.tiktok.com/@thaif.npb/video/7701054094332464416",
+    },
+    published: true,
+  },
+  {
     slug: "projet-annonceur-01",
     title: "[PROJET ANNONCEUR 01]",
     client: "[CLIENT À AJOUTER]",

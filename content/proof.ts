@@ -70,4 +70,9 @@ export const clientLogos: {
     src: "/clients/Screenshot%202026-09-29%2019.49.34.png",
     type: "portrait",
   },
+  {
+    name: "THAÏF",
+    src: "/clients/IMG-20261102-WA0090.jpg",
+    type: "portrait",
+  },
 ];
