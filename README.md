@@ -109,7 +109,7 @@ le site n'affiche jamais d'adresse fictive.
   strategy: ["…", "…"],
   delivery: ["…", "…"],
   results: [{ label: "Portée mensuelle", value: "+X %" }], // vide tant qu'aucun chiffre validé
-  link: null,
+  links: [],                              // liens vers les contenus du projet
   published: true,                        // false pour masquer sans supprimer
 }
 ```

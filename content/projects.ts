@@ -41,7 +41,7 @@ export type Project = {
   strategy: string[];
   delivery: string[];
   results: { label: string; value: string }[];
-  link?: { label: string; url: string } | null;
+  links?: { label: string; url: string }[] | null;
   published: boolean;
 };
 
@@ -68,10 +68,10 @@ export const projects: Project[] = [
       "Montage du clip vidéo",
     ],
     results: [],
-    link: {
+    links: [{
       label: "Voir le clip",
       url: "https://youtu.be/BWvaUdIl_Kw?si=3B3Sr4CNI7lwbdfF",
-    },
+    }],
     published: true,
   },
   {
@@ -103,10 +103,16 @@ export const projects: Project[] = [
       "Cover",
     ],
     results: [],
-    link: {
-      label: "Voir une vidéo sur TikTok",
-      url: "https://www.tiktok.com/@thaif.npb/video/7701054094332464416",
-    },
+    links: [
+      {
+        label: "Voir une vidéo sur TikTok",
+        url: "https://www.tiktok.com/@thaif.npb/video/7701054094332464416",
+      },
+      {
+        label: "Voir une autre vidéo sur TikTok",
+        url: "https://www.tiktok.com/@thaif.npb/video/7702525369512971552",
+      },
+    ],
     published: true,
   },
   {
@@ -136,7 +142,7 @@ export const projects: Project[] = [
       "[LIVRABLE 03 — ex. gestion des publications]",
     ],
     results: [],
-    link: null,
+    links: null,
     published: false,
   },
   {
@@ -155,7 +161,7 @@ export const projects: Project[] = [
     strategy: ["[AXE STRATÉGIQUE 01]", "[AXE STRATÉGIQUE 02]"],
     delivery: ["[LIVRABLE 01]", "[LIVRABLE 02]"],
     results: [],
-    link: null,
+    links: null,
     published: false,
   },
   {
@@ -174,7 +180,7 @@ export const projects: Project[] = [
     strategy: ["[AXE STRATÉGIQUE 01]", "[AXE STRATÉGIQUE 02]"],
     delivery: ["[LIVRABLE 01]", "[LIVRABLE 02]"],
     results: [],
-    link: null,
+    links: null,
     published: false,
   },
   {
@@ -193,7 +199,7 @@ export const projects: Project[] = [
     strategy: ["[AXE STRATÉGIQUE 01]", "[AXE STRATÉGIQUE 02]"],
     delivery: ["[LIVRABLE 01]", "[LIVRABLE 02]"],
     results: [],
-    link: null,
+    links: null,
     published: false,
   },
   {
@@ -212,7 +218,7 @@ export const projects: Project[] = [
     strategy: ["[AXE STRATÉGIQUE 01]", "[AXE STRATÉGIQUE 02]"],
     delivery: ["[LIVRABLE 01]", "[LIVRABLE 02]"],
     results: [],
-    link: null,
+    links: null,
     published: false,
   },
   {
@@ -231,7 +237,7 @@ export const projects: Project[] = [
     strategy: ["[AXE STRATÉGIQUE 01]", "[AXE STRATÉGIQUE 02]"],
     delivery: ["[LIVRABLE 01]", "[LIVRABLE 02]"],
     results: [],
-    link: null,
+    links: null,
     published: false,
   },
 ];

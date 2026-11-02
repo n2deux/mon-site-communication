@@ -168,16 +168,19 @@ export default async function ProjectPage({ params }: Params) {
               )}
             </Block>
 
-            {project.link && (
-              <div className="border-t border-line py-8">
-                <a
-                  href={project.link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[0.95rem] text-accent underline underline-offset-4"
-                >
-                  {project.link.label}
-                </a>
+            {project.links && project.links.length > 0 && (
+              <div className="flex flex-col gap-3 border-t border-line py-8">
+                {project.links.map((link) => (
+                  <a
+                    key={link.url}
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[0.95rem] text-accent underline underline-offset-4"
+                  >
+                    {link.label}
+                  </a>
+                ))}
               </div>
             )}
           </div>
